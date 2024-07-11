@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .selectcolor {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Make the color using this color</h1>
+        <div class="colors">
+            <form action="">
+                <div><label for="red">Set red Color :</label>
+                    <input type="range" id="red" min="0" max="255" value="0">
+                </div>
+                <div><label for="green">Set green Color :</label>
+                    <input type="range" id="green" min="0" max="255" value="0">
+                </div>
+                <div><label for="blue">Set blue Color :</label>
+                    <input type="range" id="blue" min="0" max="255" value="0">
+                </div>
+                <button type="submit">GEt the color</button>
+            </form>
+            <div class="selectcolor"></div>
+        </div>
+    </div>
+    <script>
+        const red = document.querySelector('#red');
+        const green = document.querySelector('#green');
+        const blue = document.querySelector('#blue');
+        let form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const co = `rgb(${red.value},${green.value},${blue.value})`;
+            document.querySelector('.selectcolor').style.backgroundColor = co;
+        })
+    </script>
+</body>
+
+</html>

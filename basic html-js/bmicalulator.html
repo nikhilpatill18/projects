@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI ccalculator</title>
+</head>
+<style>
+    body {
+        background-color: #77E4C8;
+    }
+
+    .container {
+        margin-top: 10px;
+        height: 400px;
+        width: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #478CCF;
+        border-radius: 10px;
+        filter: drop-shadow(3px 5px 3px #36C2CE);
+        transition: 1s ease-in;
+        transform: translateY(0);
+
+    }
+
+    .container:hover {
+        transform: translateY(-10px);
+        transition: .5s ease-out
+    }
+
+    .title {
+        margin: 20px;
+    }
+
+    .input1 {
+        margin: 30px;
+        outline: none;
+    }
+
+    .input2 {
+        margin: 30px;
+    }
+
+    button {
+        margin: 30px;
+        text-align: justify;
+        padding: 5px;
+        border: 2px solid #36C2CE;
+        border-radius: 5px;
+        background-color: #77E4C8;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>BMI Calculator</h1>
+        </div>
+        <form action="">
+            <div class="input1">
+                <label for="height" class="height">Height in CM</label>
+                <input type="text" id="height">
+            </div>
+            <div class="input2">
+                <label for="weight" class="height">Weight in Kg</label>
+                <input type="text" id="weight">
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center;"> <button
+                    type="submit">Calulate</button></div>
+            <div style="display: flex; align-items: center; justify-content: center;" id="result"></div>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const height = parseInt(document.querySelector('#height').value)
+            const weight = parseInt(document.querySelector('#weight').value)
+            const results = document.querySelector('#result')
+            if (height === '' || height < 0 || isNaN(height)) {
+                results.innerHTML = "please Give a valid height"
+            }
+            else if (weight === '' || weight < 0 || isNaN(weight)) {
+                results.innerHTML = "please Give a valid weight"
+            }
+            else {
+                results.innerHTML = `BMI is : ${(weight / ((height * height) / 10000)).toFixed(2)
+                    }`
+            }
+
+
+
+        })
+    </script>
+</body>
+
+</html>
