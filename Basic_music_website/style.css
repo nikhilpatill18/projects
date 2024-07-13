@@ -5,7 +5,7 @@
 }
 
 header {
-    background-color: rgb(45, 26, 91);
+    background-color: rgb(43, 26, 84);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -129,4 +129,111 @@ ul a:hover {
     height: 1000px;
     color: whitesmoke;
     gap: 30px;
+}
+
+.giftcard {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 300px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    border-bottom: 1px solid gray;
+}
+
+.about p {
+    text-align: justify;
+
+}
+
+.about button {
+    background-color: rgb(75, 23, 121);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bottomline {
+    border: 1px solid grey
+}
+
+.footer {
+    background-color: rgb(43, 26, 84);
+    color: white;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.shop li {
+    list-style: none;
+    font-size: 15px;
+}
+
+.shop h4 {
+    margin: 10px 0;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
+
+.orange {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.orange li {
+    list-style: none;
+    font-size: 15px;
+}
+
+.orange h4 {
+    margin: 10px 0;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.education li {
+    list-style: none;
+    font-size: 15px;
+}
+
+.education h4 {
+    margin: 10px 0;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+}
+
+.footer2 {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(18, 8, 27);
+    color: white;
 }
